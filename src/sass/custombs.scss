@@ -1,0 +1,32 @@
+@use "sass:color";
+//$dark: #0C1618;
+//$light: #FAF4D3;
+//$accent: #004643;
+//$dark-accent: color.mix($dark, $accent, 75%);
+//$success: #F6BE9A;
+//$primary: color.complement($success);
+//$warning: #D1AC00;
+
+$dark: #1D1E2C;
+$light: #FFFFFF;
+$accent: #59656F;
+$dark-accent: color.mix($dark, $accent, 75%);
+$success: #9C528B;
+$primary: color.complement($success);
+$warning: #d7c0bd;
+
+$theme-colors: ("primary": $primary, "dark": $dark, "light": $light, "accent": $accent, "dark-accent":$dark-accent, "success": $success, "warning": $warning);
+
+$border-radius: 0.1rem;
+$border-radius-sm: 0.05rem;
+$border-radius-lg: 0.15rem;
+
+$btn-line-height: 2rem;
+
+
+$breakpoints: (
+        xs: 576px,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px
+);

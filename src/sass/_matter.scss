@@ -1,0 +1,19 @@
+.matter-board{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+.img-responsive{
+  width:100%;
+  height: 100%;
+}
+
+.near{
+  opacity: 1;
+}
+.far{
+  opacity: 0.5;
+}
+.further{
+  opacity: 0.3;
+}

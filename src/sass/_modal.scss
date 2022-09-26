@@ -1,0 +1,72 @@
+@import "./custombs.scss";
+@import "./mixins.scss";
+
+.modal-back{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transition: .5s;
+  background: rgba(0, 0, 0, 0.63);
+  z-index: 10;
+  opacity: 0;
+  &.modal-back-enter{
+    opacity: 0;
+  }
+  &.modal-back-enter-active, &.modal-back-enter-done{
+    opacity: 1;
+  }
+  .modal-back-exit {
+    opacity: 1;
+  }
+  .modal-back-exit-active {
+    opacity: 0;
+  }
+
+}
+.modal-front{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  transition: 350ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 11;
+  opacity: 0;
+  transform: translateY(10px);
+  &.modal-front-enter{
+    opacity: 0;
+  }
+  &.modal-front-enter-active, &.modal-front-enter-done{
+    transform: translateY(0)!important;
+    opacity: 1;
+  }
+  &.modal-front-exit {
+    opacity: 1;
+  }
+  &.modal-front-exit-active {
+    opacity: 0;
+    transition: opacity 350ms;
+  }
+
+}
+
+
+
+.modal-front-main{
+  height: fit-content;
+  max-width: 80vw;
+  background: $light;
+  border-radius: .3rem;
+  border: 1px solid #00000066;
+  box-shadow: 0px 0px 9px 0px $primary;
+}
+
+@include respond-above(md) {
+ .modal-front-main{
+    width: 30%
+  }
+}
+

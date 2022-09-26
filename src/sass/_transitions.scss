@@ -1,0 +1,33 @@
+@import "custombs.scss";
+
+.fade-out{
+  opacity: 0!important;
+}
+.fade-in{
+  opacity: 1!important;
+  transition: 5s;
+}
+.slide-out-fade{
+  opacity: 0;
+  transform: translateX(-100vw);
+}
+
+.homeButtonsBase{
+  left: -20px;
+  opacity: 0;
+  transition-delay: 1250ms, 1250ms;
+  transition-duration: .5s, .5s;
+  transition-property: opacity, left;
+}
+.homeButtons{
+  &.homeButtons-appear-done{
+    opacity: 1;
+    left: 0;
+  };
+}
+.drag-button > button{
+  box-shadow: 0 0 11px 0 $light
+}
+.trans-4{
+  transition: 400ms;
+}

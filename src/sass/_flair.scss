@@ -1,0 +1,12 @@
+@use "sass:color";
+@import "./custombs.scss";
+
+.rounded_flair{
+  width: 100vw;
+  height: 6vh;
+  position: absolute;
+  background: color.scale($accent, $blackness: 40%);
+  border-radius: 0 0 1000px;
+  opacity: .25;
+  z-index: -1;
+}

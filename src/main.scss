@@ -1,0 +1,223 @@
+@use "sass:color";
+@import "./sass/custombs.scss";
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans|Josefin+Sans|Source+Code+Pro|Silkscreen");
+@import "./sass/_typography.scss";
+@import "./sass/_flair.scss";
+@import "./sass/_nav.scss";
+@import "./sass/mixins.scss";
+@import "./sass/_animation.scss";
+@import "./sass/_modal.scss";
+@import "./sass/_transitions.scss";
+@import "./sass/_matter.scss";
+
+$breakpoints: (
+        xs: 576px,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px
+);
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.accent-text {
+  color: $primary;
+}
+
+p.main {
+  color: $warning;
+  font-size: 1rem;
+  display: inline;
+  del {
+    text-decoration-color: $primary;
+    text-decoration-thickness: 3px;
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: "Fira Sans", "Josefin Sans", "Inconsolata", "Droid Sans", "Della Respira", serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $dark;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.main-body{
+  background: $dark;
+  transition: 0.5s cubic-bezier(0.72, 0.19, 0.25, 1.48);
+  min-height: 100vh;
+  &.main-body-enter {
+    opacity: 1;
+  }
+  &.main-body-enter-active {
+    transform: translateX(-100vw);
+    z-index: -2;
+  }
+  &.main-body-enter-done {
+    transform: translateX(-100vw);
+    z-index: -2;
+  }
+  &.main-body-exit {
+    transform: translateX(0vw);
+    z-index: -2;
+  }
+  &.main-body-exit-active {
+
+  }
+}
+
+
+
+a, a:visited {
+  font-family: "Source Code Pro", monospace;
+  color: $light;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  color: $light;
+  text-decoration: none;
+}
+
+h1.big {
+  font-size: 2rem;
+  color: $light;
+  line-height: 4rem;
+}
+
+h2.big {
+  font-size: 1.75rem;
+  color: $light;
+}
+
+.z-1{
+  z-index: -1;
+}
+
+.mono{
+  font-family: "Source Code Pro", monospace;
+}
+//homepage
+.home_image {
+  max-height: 90vh;
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+.backlight {
+  filter: opacity(0.2);
+}
+
+.monitor_image {
+  @extend .home_image;
+  filter: contrast(1) drop-shadow(12px 16px 101px #000000);
+}
+
+.computer-text {
+  top: 30%;
+  left: 30%;
+  transform: rotate(4deg);
+}
+
+.intro-home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+//scrollbar
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $light;
+  border: 1px solid $warning;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: $dark-accent;
+}
+
+::selection {
+  background-color: $accent;
+  color: $light;
+}
+
+.main_loading {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transition: 2s;
+  width: 100%;
+  position: fixed;
+}
+.typer-loading{
+  height: 80px
+}
+.progress-width{
+  width: 70%
+}
+.content-holder{
+  opacity: 0;
+}
+.stats{
+  display: none;
+}
+@include respond-above(md) {
+   .stats{
+     position: fixed;
+     display: block;
+     border: 2px solid $dark-accent!important;
+     bottom: 2vh;
+     box-shadow: 1px 1px 20px 8px rgba(0, 0, 0, 0.8);
+     right: 2vw;
+     background: #FFFFFF;
+     color: #2c303d;
+     width: 10vw;
+     height: 10vw;
+     .code{
+       overflow-wrap: break-word;
+       font-size: .7rem;
+     }
+   }
+
+   h1.big {
+     font-size: 4rem;
+     font-weight: bolder;
+   }
+   h2.big {
+     font-size: 4rem;
+     color: $light;
+     font-weight: bolder;
+   }
+   p.main {
+     font-size: 1.1rem;
+   }
+  .progress-width{
+    width: 20%;
+    height: 5px;
+  }
+
+ }
+
+
