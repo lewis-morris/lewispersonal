@@ -225,7 +225,7 @@ export default function HomePage() {
     const alives_total = useRef(0)
     const [loads, setLoads] = useState(0)
     const matter = useMatter()
-    const max_items = 350
+    const max_items = 300
 
     // this will add 10 elements every seconds to the screen
 
@@ -238,7 +238,7 @@ export default function HomePage() {
         //     // _.throttle(()=>{make_new_star_element(event.clientX,event.clientY)}, 50)()
         // }
         const limit_make_star = _.throttle((event) => {
-            make_new_star_element(event.clientX, event.clientY)
+            make_new_star_element(event.clientX, event.clientY, true)
         }, 200)
         const makeStars = (event) => {
             console.log(event.button)
@@ -255,7 +255,7 @@ export default function HomePage() {
         };
     }, []);
 
-    function makeFirstLocation() {
+    function makeFirstLocation(forceBig = false) {
         // makes the starting point of this item
         let y_position = randomIntFromInterval(height * .8 * -1, height * .9)
         let options
@@ -263,11 +263,11 @@ export default function HomePage() {
         let className
 
         let rand = randomIntFromInterval(0, 200)
-        if (rand > 168) {
+        if (rand > 168 && !forceBig) {
             calc_dimens = randomIntFromInterval(6, 14)
             options = {restitution: 0.8, friction: 0.05, frictionAir: randomIntFromInterval(60, 90) / 4000}
             className = randomIntFromInterval(0, 10) < 9 ? "near star" : "upclose star"
-        } else if (rand < 3) {
+        } else if (rand < 3 || forceBig) {
             if (randomIntFromInterval(1, 5) == 3) {
                 calc_dimens = randomIntFromInterval(30, 60)
             } else {
@@ -296,9 +296,9 @@ export default function HomePage() {
         return [true, init, options, className]
     }
 
-    function make_new_star_element(x, y) {
+    function make_new_star_element(x, y, forceBig) {
         index.current = index.current + 1
-        let [sticky, initial_dimensions, options, className] = makeFirstLocation()
+        let [sticky, initial_dimensions, options, className] = makeFirstLocation(forceBig)
 
         // sometimes mouse clicks determine the position of the star
         if (x) {
