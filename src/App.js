@@ -5,11 +5,11 @@ import ExperiencePage from "./pages/ExperiencePage";
 import SkillsPage from "./pages/SkillsPage";
 import HomePage from "./pages/HomePage";
 import ModalProvider from "./provider/ModalProvider";
-import {useEffect, useRef, useState} from "react"
+import {React, useEffect, useRef, useState} from "react"
 import Typer from "./components/Typer";
 import {ProgressBar} from "react-bootstrap";
 import {RecoilRoot} from "recoil";
-import { React } from "react";
+import MatterProvider from "./provider/MatterProvider";
 
 const show_loading = 5000
 const loading_times = 20
@@ -76,7 +76,7 @@ export default function App() {
                             <Routes>
                                 <Route path="/experience" element={<ExperiencePage/>}/>
                                 <Route path="/skills" element={<SkillsPage/>}/>
-                                <Route path="/" element={<HomePage/>}/>
+                                <Route path="/" element={<MatterProvider><HomePage/></MatterProvider>}/>
                             </Routes>
                         </BrowserRouter>
                     </ModalProvider>

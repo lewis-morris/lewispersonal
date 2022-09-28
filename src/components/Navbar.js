@@ -1,7 +1,7 @@
 import Nav from "react-bootstrap/Nav";
 import {useLocation, useNavigate} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faHouse, faHatWizard, faChartColumn, faMessage} from '@fortawesome/free-solid-svg-icons';
+import {faChartColumn, faHatWizard, faHouse, faMessage} from '@fortawesome/free-solid-svg-icons';
 import {useModal} from "../provider/ModalProvider";
 import {CSSTransition} from "react-transition-group";
 import {useEffect, useState} from "react";
@@ -42,7 +42,7 @@ export default function Navbar({func}) {
 
     useEffect(() => {
         close_nav()
-    }, [location]);
+    }, [location, close_nav]);
 
     return (<>
         <CSSTransition in={open} timeout={300} classNames="nav">

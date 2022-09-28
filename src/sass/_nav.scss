@@ -62,7 +62,7 @@ $highlight-more: color.scale($accent, $lightness: 50%, $saturation: -50%)!import
 .socials-bar{
   position: fixed;
   bottom: 0;
-  left: 3%;
+  right: 5%;
   transition: 0.7s;
   row-gap: 1rem;
   display: flex;

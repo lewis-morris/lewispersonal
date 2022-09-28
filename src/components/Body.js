@@ -1,8 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from './Navbar';
-import {useRef, useState } from "react";
+import {useRef, useState} from "react";
 import {CSSTransition} from "react-transition-group";
 import Socials from "./Social";
+
 export default function Body({ sidebar, children }) {
     const body = useRef()
     const [move, setMove] = useState(false)

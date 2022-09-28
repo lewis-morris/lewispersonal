@@ -20,6 +20,8 @@
     "react-transition-group": "^4.4.5",
     "recoil": "^0.7.5",
     "sass": "^1.54.9",
+    "short-uuid": "^4.2.0",
+    "uuid4": "^2.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

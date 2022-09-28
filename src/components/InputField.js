@@ -1,5 +1,6 @@
 import Form from 'react-bootstrap/Form'
 import {useEffect, useState} from "react";
+
 export default function InputField({min, max, name, label, type, placeholder, error, fieldRef}){
 
     const [field, setField] = useState("")
