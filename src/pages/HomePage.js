@@ -255,7 +255,6 @@ export default function HomePage() {
         };
     }, []);
 
-
     function makeFirstLocation() {
         // makes the starting point of this item
         let y_position = randomIntFromInterval(height * .8 * -1, height * .9)
