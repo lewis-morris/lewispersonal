@@ -434,25 +434,25 @@ export default function HomePage() {
 
                                     {/*draggable buttons */}
                                     <div className={"d-flex mt-3"}>
-                                        <MatterElement typ={"block"} options={{isStatic: true}} delay={800}>
-                                            <CSSTransition classNames={"homeButtons"} in={true} appear={true}
-                                                           timeout={300}>
-                                                <Button variant="outline-primary"
-                                                        className={"homeButtons homeButtonsBase me-2 position-relative"}>Find
-                                                    Out More</Button>
-                                            </CSSTransition>
-                                        </MatterElement>
-                                        <div className={"mx-2"}>
+                                        {/*<MatterElement typ={"block"} options={{isStatic: true}} delay={800}>*/}
+                                        {/*    <CSSTransition classNames={"homeButtons"} in={true} appear={true}*/}
+                                        {/*                   timeout={300}>*/}
+                                        {/*        <Button variant="outline-primary"*/}
+                                        {/*                className={"homeButtons homeButtonsBase me-2 position-relative"}>Find*/}
+                                        {/*            Out More</Button>*/}
+                                        {/*    </CSSTransition>*/}
+                                        {/*</MatterElement>*/}
+                                        {/*<div className={"mx-2"}>*/}
 
-                                        </div>
-                                        <MatterElement typ={"block"} options={{isStatic: true}} delay={800}>
-                                            <CSSTransition classNames={"homeButtons"} in={true} appear={true}
-                                                           timeout={300}>
-                                                <Button onClick={modal.showModal} variant="primary"
-                                                        className="homeButtons homeButtonsBase text-light position-relative">Contact
-                                                    Me</Button>
-                                            </CSSTransition>
-                                        </MatterElement>
+                                        {/*</div>*/}
+                                        {/*<MatterElement typ={"block"} options={{isStatic: true}} delay={800}>*/}
+                                        {/*    <CSSTransition classNames={"homeButtons"} in={true} appear={true}*/}
+                                        {/*                   timeout={300}>*/}
+                                        {/*        <Button onClick={modal.showModal} variant="primary"*/}
+                                        {/*                className="homeButtons homeButtonsBase text-light position-relative">Contact*/}
+                                        {/*            Me</Button>*/}
+                                        {/*    </CSSTransition>*/}
+                                        {/*</MatterElement>*/}
 
                                         <MatterElement typ={"block"} options={{isStatic: true}} delay={800}>
                                             <CSSTransition classNames={"homeButtons"} in={true} appear={true}
