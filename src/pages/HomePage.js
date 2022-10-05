@@ -433,7 +433,7 @@ export default function HomePage() {
                                     <br/>
 
                                     {/*draggable buttons */}
-                                    <div className={"d-flex"}>
+                                    <div className={"d-flex mt-3"}>
                                         <MatterElement typ={"block"} options={{isStatic: true}} delay={800}>
                                             <CSSTransition classNames={"homeButtons"} in={true} appear={true}
                                                            timeout={300}>
