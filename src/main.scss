@@ -30,14 +30,18 @@ $breakpoints: (
 
 p.main {
   color: $warning;
-  font-size: 1rem;
+  font-size: 0.8rem;
   display: inline;
+
   del {
     text-decoration-color: $primary;
     text-decoration-thickness: 3px;
   }
 }
 
+.mb-main {
+  margin-bottom: 2rem;
+}
 
 body {
   margin: 0;
@@ -184,16 +188,20 @@ h2.big {
   display: none;
 }
 @include respond-above(md) {
-   .stats{
-     position: fixed;
-     display: block;
-     border: 2px solid $dark-accent!important;
-     bottom: 2vh;
-     box-shadow: 1px 1px 20px 8px rgba(0, 0, 0, 0.8);
-     right: 2vw;
-     background: #FFFFFF;
-     color: #2c303d;
-     width: 10vw;
+
+  .mb-main {
+    margin-bottom: 1.5rem;
+  }
+  .stats {
+    position: fixed;
+    display: block;
+    border: 2px solid $dark-accent !important;
+    bottom: 2vh;
+    box-shadow: 1px 1px 20px 8px rgba(0, 0, 0, 0.8);
+    right: 2vw;
+    background: #FFFFFF;
+    color: #2c303d;
+    width: 10vw;
      height: 10vw;
      .code{
        overflow-wrap: break-word;

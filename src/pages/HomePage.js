@@ -390,7 +390,7 @@ export default function HomePage() {
                 <Row>
                     <Col lg="10">
                         <div className="intro-home">
-                            <div className={"mb-4"}>
+                            <div className={"mb-main"}>
                                 <div>
                                     {/*<div className="environment"></div>*/}
                                     <h1 className="big hero glitch layers" data-text="I'm Lewis"><span>I'm Lewis</span>
